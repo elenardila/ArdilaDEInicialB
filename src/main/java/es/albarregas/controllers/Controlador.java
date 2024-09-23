@@ -1,8 +1,8 @@
-
 package es.albarregas.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,10 +34,20 @@ public class Controlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Controlador</title>");            
+            out.println("<title>Servlet Controlador</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Controlador at " + request.getContextPath() + "</h1>");
+            out.println("<h2>Llamda realizada por el m&eacute;todo " + request.getMethod() + "</h2>");
+            Enumeration<String> parametros = request.getParameterNames();
+            if (parametros.hasMoreElements()) {
+                while (parametros.hasMoreElements()) {
+                    String nombre = parametros.nextElement();
+                    out.println("<p>El valor de " + nombre + " es " + request.getParameter(nombre) + "</p>");
+                }
+            }
+
+            out.println("<p><a href='index.html'>Volver</a></p>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -54,7 +64,7 @@ public class Controlador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
+        doGet(request, response);
     }
 
     /**
