@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Entrada de datos</h1>
+        <form action="../Datos" method="post">
+            <label>Nombre: </label>
+            <input type="text" name="nombre"><br>
+            <br>
+            <label>Apellido: </label>
+            <input type="text" name="apellido"><br>
+            <br>
+            <label>Fecha de nacimiento: </label><br>
+            <input type="date" name="nacimiento"><br>
+            <br>
+            <label>Preferencias:</label><br>
+            <input type="checkbox" name="op1" value="musica"> M&uacute;sica<br>
+            <input type="checkbox" name="op2" value="cine"> Cine<br>
+            <input type="checkbox" name="op3" value="teatro">Teatro<br>
+            <input type="checkbox" name="op4" value="videojuegos"> Videojuegos<br>
+            <br>
+            <label>Selecciona la opci&oacute;n:</label><br>
+            <select id="sistemas_operativos" name="sistemas-operativos" required>
+                <option value="windows">Windows</option>
+                <option value="macos">macOS</option>
+                <option value="linux">Linux</option><br>
+            </select>
+            <br><br>
+            <label>Seleccione su género:</label><br>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" id="femenino" name="genero" value="femenino" checked>
+            <label for="femenino">Femenino</label><br>
+            <input type="radio" id="otros" name="genero" value="otros">
+            <label for="otros">Otros</label><br>
+            <br>
+            <input type="submit" name="enumeration" value="Enumeration">
+            <input type="submit" name="name" value="Map">
+        </form>
+    </body>
+</html>
