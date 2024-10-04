@@ -49,7 +49,7 @@ public class ValidadorIntermedio extends HttpServlet {
         formulario.append("</head>");
         formulario.append("<body>");
         formulario.append("<h1>Entrada de datos</h1>");
-        formulario.append("<form action=\"../Datos\" method=\"post\">");
+        formulario.append("<form action=\"ValidadorIntermedio\" method=\"post\">");
         formulario.append("<label>Nombre: </label>");
         formulario.append("<input type=\"text\" name=\"nombre\"><br>");
         formulario.append("<br>");
@@ -80,15 +80,12 @@ public class ValidadorIntermedio extends HttpServlet {
         formulario.append("<input type=\"radio\" id=\"otros\" name=\"genero\" value=\"otros\">");
         formulario.append("<label for=\"otros\">Otros</label><br>");
         formulario.append("<br>");
-        formulario.append("<input type=\"submit\" name=\"enumeration\" value=\"Enumeration\">");
-        formulario.append("<input type=\"submit\" name=\"name\" value=\"Map\">");
+        formulario.append("<input type=\"submit\" name=\"primera\" value=\"Enumeration\">");
+       
         formulario.append("</form>");
         formulario.append("</body>");
         formulario.append("</html>");
         out.println(formulario.toString());
-
-
-        out.println("<h1>ERROR</h1>");
 
     }
 

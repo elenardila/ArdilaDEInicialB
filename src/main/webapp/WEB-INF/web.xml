@@ -12,6 +12,10 @@
         <servlet-name>ValidadorIntermedio</servlet-name>
         <servlet-class>es.albarregas.controllers.ValidadorIntermedio</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Recordar</servlet-name>
+        <servlet-class>es.albarregas.controllers.Recordar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Datos</servlet-name>
         <url-pattern>/Datos</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ValidadorIntermedio</servlet-name>
         <url-pattern>/ValidadorIntermedio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Recordar</servlet-name>
+        <url-pattern>/Recordar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
