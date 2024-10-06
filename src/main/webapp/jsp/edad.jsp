@@ -1,5 +1,4 @@
 <%@page import="java.time.Period"%>
-<%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,23 +23,23 @@
 
             } else {
                 Period edad = Period.between(fechaIntroducida, fechaActual);
-                boolean hasYears = edad.getYears() > 0;
-                boolean hasMonths = edad.getMonths() > 0;
-                boolean hasDays = edad.getDays() > 0;
+                boolean hayAnios = edad.getYears() > 0;
+                boolean hayMeses = edad.getMonths() > 0;
+                boolean hayDias = edad.getDays() > 0;
 
-                if (hasYears) {
+                if (hayAnios) {
                     mensaje.append("tienes ").append(edad.getYears()).append(" años");
                 }
-                if (hasMonths) {
-                    if (hasYears) {
+                if (hayMeses) {
+                    if (hayAnios) {
                         mensaje.append(", ");
                     } else {
                         mensaje.append("tienes ");
                     }
                     mensaje.append(edad.getMonths()).append(" meses");
                 }
-                if (hasDays) {
-                    if (hasYears || hasMonths) {
+                if (hayDias) {
+                    if (hayAnios || hayMeses) {
                         mensaje.append(" y ");
                     } else {
                         mensaje.append("tienes ");
