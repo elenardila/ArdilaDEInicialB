@@ -1,0 +1,19 @@
+<html lang="es">
+    <head>
+        <title>Monedero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Monedero</h1>
+        <form action="../jsp/monedero.jsp" method="post">
+            <label>Introduce el precio del producto: </label>
+            <input type="number" name="precio" placeholder="Introduce un número" step="any" required ><br><br>
+            <label>Cantidad con la que paga:</label>
+            <input type="number" name="cantidad" step="any" required><br><br>
+            <input type="submit" value="Calcular Vuelta">
+            <input type="reset" name="Limpiar" value="Limpiar">
+            <input type="button" name="Volver" value="Volver" onclick="history.back()">
+        </form>
+            </body>
+            </html>

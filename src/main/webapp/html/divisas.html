@@ -1,0 +1,34 @@
+<html lang="es">
+    <head>
+        <title>Calculadora de Divisas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Calculadora de Divisas</h1>
+        <form action="../jsp/divisas.jsp" method="post">
+            <label>Introduce un número: </label>
+            <input type="number" name="numero" placeholder="Introduce un número" step="any" required ><br><br>
+            <label>Convertir de: </label>
+            <select id="monedaOriginal" name="monedaOriginal" >
+                <option value="Euros">Euros</option>
+                <option value="Dólares">D&oacute;lares</option>
+                <option value="Yenes">Yenes</option>
+                <option value="Libras">Libras Esterlinas</option>
+                <br>
+            </select><br><br>
+            <label>A: </label>
+            <select id="monedaFinal" name="monedaFinal" required>
+                <option value="Euros">Euros</option>
+                <option value="Dólares">D&oacute;lares</option>
+                <option value="Yenes">Yenes</option>
+                <option value="Libras">Libras Esterlinas</option>
+                <br>
+            </select>
+            <br><br><input type="submit" name="Comprobar">
+            <input type="reset" name="Limpiar" value="Limpiar">
+            <input type="button" name="Volver" value="Volver" onclick="history.back()">
+            
+        </form>
+    </body>
+</html>
